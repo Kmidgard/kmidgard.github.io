@@ -1,0 +1,321 @@
+body {
+    background-color: #FBFBFE;
+    color: #357E2B;
+    font-family: Helvetica, Arial, sans-serif;
+}
+header {
+    background-color: #FBFBFE;
+    color: #000033;
+    line-height: 400%;
+    text-indent: 1em;
+}
+nav {
+    background-color: #357E2B;
+    font-weight: bold;
+    margin-left: -8px;
+    margin-right: -8px;
+    padding: 0.75rem 1rem;
+}
+h1 {
+    font-family: Helvetica, "Arial", sans-serif;
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+h2 {
+    color: #357E2B;
+    font-family: Helvetica, "Arial", sans-serif;
+}
+h3 {
+    font-family: Helvetica, "Arial", sans-serif;
+    color: #8cd44d;
+}
+dt {
+    color: #99f092;
+}
+nav a {
+    text-decoration: none;
+    color: white
+}
+nav b {
+    display: flex;
+    gap: 0;
+    justify-content: space-evenly;
+}
+footer {
+    font-size: 75%;
+    font-style: italic;
+    text-align: center;
+    font-family: Helvetica, "Arial", serif;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 400px;
+    max-width: 100%;
+}
+label, 
+input, 
+textarea {
+    display: block;
+    width: 100%;
+    text-align: left;
+}
+* {
+    font-family: Helvetica, Arial, sans-serif;
+}
+form {
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    gap: 0.75rem 1rem;
+    max-width: 600px;
+    margin: 1rem 0;
+}
+form label {
+    text-align: left;
+    align-self: center;
+    font-weight: bold;
+}
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0.4rem 0.5rem;
+}
+form textarea {
+    min-height: 90px;
+    resize: vertical;
+}
+#mySubmit {
+    grid-column: 2;
+    justify-self: start;
+    width: auto;
+    padding: 0.35rem 0.9rem;
+    font-size: 0.85rem;
+    cursor: pointer;
+}
+.featured-image {
+  width: 25%;
+  max-width: 100px;
+  height: auto;
+  display: block;
+}
+.video-section {
+    text-align: center;
+}
+.video-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    max-width: 420px;
+    margin: 0 auto;
+    min-height: 180px;
+    border: 2px dashed #357E2B;
+    background-color: #eef8ec;
+    margin-left: 0;
+    margin-right: auto;
+}
+.home-video {
+    display: block;
+    width: 100%;
+    max-width: 420px;
+    height: auto;
+    border-radius: 8px;
+    background-color: #000;
+    margin: 0 auto;
+}
+.home-lower-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2em;
+    align-items: center;
+    justify-content: center;
+    width: min(900px, 100%);
+    margin: 0 auto 2em;
+}
+.three-image-group,
+.video-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.three-image-group .home-featured-image,
+.home-video {
+    width: 100%;
+    max-width: 420px;
+    display: block;
+    margin: 0 auto;
+    height: auto;
+}
+.home-video {
+    max-height: 340px;
+}
+.video-section h2 {
+    display: none;
+}
+.video-row .image-section h2 {
+    display: none;
+}
+.content-row {
+    display: grid;
+    grid-template-columns: 1fr 1.7fr;
+    gap: 2em;
+    align-items: start;
+    margin: 2em 0;
+}
+.aboutme-layout section:first-child {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100%;
+}
+.aboutme-layout section:first-child img {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    display: block;
+}
+.aboutme-layout section:last-child {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+}
+.aboutme-layout section:last-child h3,
+.aboutme-layout section:last-child p {
+    margin: 0 0 0.75rem 0;
+    width: 100%;
+}
+.quote-section {
+    width: 320px;
+    max-width: 100%;
+    aspect-ratio: 1;
+    box-sizing: border-box;
+    border-radius: 50%;
+    background-color: #357E2B;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 0;
+    gap: 0.5rem;
+}
+.home-featured-image {
+    width: 100%;
+    max-width: 420px;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    object-fit: cover;
+    margin: 0 auto;
+}
+.quote-section h2,
+.image-section h2,
+.video-section h2 {
+    margin-top: 0;
+    color: white;
+}
+.quote-section h2,
+.quote-section p {
+    width: 78%;
+    max-width: 220px;
+    margin: 0;
+    text-align: center;
+    line-height: 1.2;
+}
+.quote-section p {
+    margin-top: 0;
+}
+.image-section {
+    text-align: center;
+}
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(120px, 1fr));
+    gap: 0.75rem;
+    margin: 2rem auto;
+    max-width: 100%;
+    align-items: stretch;
+}
+.gallery-item {
+    background: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+.gallery-item img {
+    width: 100%;
+    height: 160px;
+    object-fit: contain;
+    background-color: #f3f8f2;
+    display: block;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+.quote-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    align-items: center;
+    width: min(100%, 900px);
+    margin: 0 auto;
+}
+.quote-gallery img {
+    width: 100%;
+    height: auto;
+    max-width: 240px;
+    display: block;
+    object-fit: contain;
+    justify-self: center;
+    align-self: center;
+}
+.quote-image {
+    display: block;
+    width: 100%;
+    max-width: 180px;
+    height: auto;
+}
+.video-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 0;
+    margin-right: auto;
+}
+.video-row .video-section {
+    width: 100%;
+}
+.video-row .image-section {
+    align-self: flex-end;
+    width: calc(50% - 1em);
+}
+@media (max-width: 700px) {
+    .content-row {
+        grid-template-columns: 1fr;
+    }
+    .gallery-grid {
+        grid-template-columns: repeat(2, minmax(120px, 1fr));
+    }
+    .video-row .image-section {
+        align-self: stretch;
+        width: 100%;
+    }
+}
+
+@media (max-width: 500px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+}
