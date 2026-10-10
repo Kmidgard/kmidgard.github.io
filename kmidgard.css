@@ -89,6 +89,25 @@ form textarea {
     min-height: 90px;
     resize: vertical;
 }
+.contact-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+    gap: 2rem;
+    align-items: center;
+}
+.contact-details {
+    margin-left: 2in;
+}
+.contact-details form {
+    width: min(400px, 100%);
+}
+.contact-image {
+    display: block;
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    justify-self: center;
+}
 #mySubmit {
     grid-column: 2;
     justify-self: start;
@@ -130,19 +149,76 @@ form textarea {
 }
 .home-lower-row {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2em;
+    grid-template-columns: minmax(0, 642px) minmax(0, 420px);
+    column-gap: 2in;
+    row-gap: 2rem;
     align-items: center;
     justify-content: center;
-    width: min(900px, 100%);
+    width: min(1254px, 100%);
     margin: 0 auto 2em;
 }
-.three-image-group,
 .video-section {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.home-video-section {
+    flex-direction: column;
+}
+.home-video-caption {
+    width: 100%;
+    margin: 0 0 0.75rem;
+    color: #357E2B;
+    font-weight: bold;
+    font-size: 1.125rem;
+    text-align: center;
+}
+.three-image-group {
+    display: grid;
+    grid-template-columns: minmax(110px, 150px) 48px minmax(0, 420px);
+    gap: 0.75rem;
+    align-items: center;
+    justify-content: center;
+}
+.featured-arrow {
+    display: block;
+    width: 100%;
+    height: auto;
+    stroke: #357E2B;
+    stroke-width: 4;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill: none;
+    animation: featured-arrow-nudge 1.4s ease-in-out infinite;
+}
+@keyframes featured-arrow-nudge {
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(5px);
+    }
+}
+@media (prefers-reduced-motion: reduce) {
+    .featured-arrow {
+        animation: none;
+    }
+}
+.featured-description {
+    box-sizing: border-box;
+    min-height: 120px;
+    padding: 0.75rem;
+    border: 1px solid #357E2B;
+    border-radius: 6px;
+    background-color: #eef8ec;
+    color: #357E2B;
+    display: flex;
+    align-items: center;
+}
+.featured-description p {
+    margin: 0;
 }
 .three-image-group .home-featured-image,
 .home-video {
@@ -168,6 +244,12 @@ form textarea {
     align-items: start;
     margin: 2em 0;
 }
+.aboutme-layout {
+    grid-template-columns: minmax(240px, 320px) minmax(0, 1fr) 165px;
+    gap: 1rem;
+    width: min(100%, 1050px);
+    margin: 2em auto;
+}
 .aboutme-layout section:first-child {
     display: flex;
     justify-content: center;
@@ -180,7 +262,7 @@ form textarea {
     height: auto;
     display: block;
 }
-.aboutme-layout section:last-child {
+.aboutme-copy {
     text-align: left;
     display: flex;
     flex-direction: column;
@@ -188,10 +270,33 @@ form textarea {
     justify-content: flex-start;
     width: 100%;
 }
-.aboutme-layout section:last-child h3,
-.aboutme-layout section:last-child p {
+.aboutme-copy h3,
+.aboutme-copy p {
     margin: 0 0 0.75rem 0;
     width: 100%;
+}
+.instagram-follow {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    padding: 0.75rem;
+    border: 1px solid #357E2B;
+    border-radius: 6px;
+    background-color: #eef8ec;
+    text-align: center;
+    font-size: 0.85rem;
+}
+.instagram-logo {
+    display: block;
+    width: 32px;
+    height: 32px;
+    align-self: center;
+}
+.instagram-follow a {
+    color: #357E2B;
+    font-weight: bold;
+    overflow-wrap: anywhere;
 }
 .quote-section {
     width: 320px;
@@ -264,6 +369,34 @@ form textarea {
     border-radius: 6px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
 }
+.painting-table-scroll {
+    max-width: 100%;
+    overflow-x: auto;
+    margin: 2rem auto;
+}
+.painting-info-table {
+    width: min(100%, 700px);
+    table-layout: fixed;
+    border-collapse: collapse;
+    color: #357E2B;
+    margin: 0 auto;
+}
+.painting-info-table th {
+    padding: 0.5rem;
+    text-align: center;
+    font-weight: bold;
+    background-color: #eaf4e8;
+    border: 1px solid #357E2B;
+    color: #357E2B;
+}
+.painting-info-table td {
+    height: 36px;
+    padding: 0.3rem;
+    border: 1px solid #357E2B;
+    background-color: #f3f8f2;
+    text-align: center;
+    vertical-align: middle;
+}
 .quote-gallery {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -301,9 +434,37 @@ form textarea {
     align-self: flex-end;
     width: calc(50% - 1em);
 }
+@media (max-width: 1270px) {
+    .home-lower-row {
+        grid-template-columns: 1fr;
+    }
+}
+@media (max-width: 1000px) {
+    .aboutme-layout {
+        grid-template-columns: minmax(220px, 320px) minmax(0, 1fr);
+        width: min(100%, 900px);
+    }
+    .instagram-follow {
+        grid-column: 2;
+        justify-self: start;
+        align-self: start;
+    }
+}
 @media (max-width: 700px) {
     .content-row {
         grid-template-columns: 1fr;
+    }
+    .contact-layout {
+        grid-template-columns: 1fr;
+    }
+    .contact-details {
+        margin-left: 0;
+    }
+    .instagram-follow {
+        grid-column: 1;
+    }
+    .three-image-group {
+        grid-template-columns: minmax(90px, 0.8fr) 36px minmax(0, 1.2fr);
     }
     .gallery-grid {
         grid-template-columns: repeat(2, minmax(120px, 1fr));
